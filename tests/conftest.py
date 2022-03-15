@@ -27,7 +27,7 @@ def dbt_profile_target(request):
     elif profile_type == "apache_spark":
         target = apache_spark_target()
     elif profile_type == "databricks_http_cluster":
-        target = databrics_http_cluster()
+        target = databricks_http_cluster_target()
     else:
         raise ValueError(f"Invalid profile type '{profile_type}'")
     return target
@@ -58,7 +58,7 @@ def databricks_cluster_target():
     }
 
 
-def databrickcs_sql_endpoint_target():
+def databricks_sql_endpoint_target():
     return {
         "type": "spark",
         "method": "odbc",
