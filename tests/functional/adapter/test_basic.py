@@ -22,6 +22,9 @@ class TestSingularTestsSpark(BaseSingularTests):
     pass
 
 
+# The local cluster currently tests on spark 2.x, which does not support this
+# if we upgrade it to 3.x, we can enable this test
+@pytest.mark.skip_profile('apache_spark')
 class TestSingularTestsEphemeralSpark(BaseSingularTestsEphemeral):
     pass
 
