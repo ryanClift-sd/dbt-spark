@@ -51,10 +51,10 @@ def _get_dbt_core_version():
     return f"{minor}{pre}"
 
 
-package_name = "dbt-spark"
-package_version = "1.0.0"
+package_name = "slickdeals-dbt-spark"
+package_version = "1.0.1"
 dbt_core_version = _get_dbt_core_version()
-description = """The Apache Spark adapter plugin for dbt"""
+description = """The Apache Spark adapter plugin for dbt, slickdeals flavor"""
 
 odbc_extras = ['pyodbc>=4.0.30']
 pyhive_extras = [
@@ -71,9 +71,9 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
 
-    author='dbt Labs',
-    author_email='info@dbtlabs.com',
-    url='https://github.com/dbt-labs/dbt-spark',
+    author='Slickdeals',
+    author_email='ryan.clift@slickdeals.net',
+    url='https://github.com/ryanClift-sd/dbt-spark',
 
     packages=find_namespace_packages(include=['dbt', 'dbt.*']),
     include_package_data=True,
